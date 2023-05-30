@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('../includes/head') %>
+  </head>
+  <body>
+    <%- include('../includes/header') %>
+
+    <main class="content-wrapper mt-5" style="margin-top: 80px !important">
+      <div class="container" style="width: 95% !important">
+        <div class="row justify-content-md-center mb-5">
+          <div class="col-md-12 mt-5">
+            <h2 class="text-center">Lista de Estudiantes</h2>
+            <hr />
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Alumno</th>
+                <th scope="col">Email Alumno</th>
+                <th scope="col">Curso del Alumno</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% let contador = 1; %>
+              <!---->
+              <% results.forEach(function(result) { %>
+              <tr>
+                <th scope="row"><%= contador %></th>
+                <td><%= result.nombre_alumno %></td>
+                <td><%= result.email_alumno %></td>
+                <td><%= result.curso_alumno %></td>
+              </tr>
+              <% contador++; %>
+              <!---->
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <%- include('../includes/scripts') %>
+  </body>
+</html>
