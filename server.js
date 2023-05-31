@@ -1,7 +1,6 @@
 //Importando el módulo 'express'
 const express = require("express");
 const cors = require("cors");
-const bodyParser = require("body-parser");
 
 //Importando la conexion a BD
 const connection = require("./configBD");
@@ -11,23 +10,12 @@ const app = express();
 const path = require("path");
 
 /**
- * app.use(cors()): Es un middleware de CORS (Cross-Origin Resource Sharing) en tu aplicación Express.
- * CORS es un mecanismo de seguridad implementado en los navegadores que restringe las solicitudes HTTP
- * que se pueden realizar desde un origen (dominio) a otro. Al utilizar app.use(cors()),
+ * app.use(cors()): Es un middleware, al utilizar app.use(cors()),
  * estás permitiendo que tu servidor responda a las solicitudes de otros dominios,
  * lo que es útil cuando estás construyendo una API o cuando tu frontend se encuentra
  * en un dominio diferente al backend.
- *
- * app.use(bodyParser.urlencoded({ extended: false })): habilita el middleware de body-parser para analizar los datos enviados
- * en el cuerpo de las solicitudes HTTP.
- * body-parser es un middleware de Express que permite acceder y procesar los datos enviados en formularios HTML.
- * bodyParser.urlencoded() se utiliza para analizar los datos codificados en URL enviados en las solicitudes POST.
- * El parámetro { extended: false } configura el analizador para que solo admita datos codificados en URL tradicionales,
- * no datos complejos como matrices o objetos anidados.
  */
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 
 /**
  * app.use Se utiliza para montar middlewares en la aplicación Express.
