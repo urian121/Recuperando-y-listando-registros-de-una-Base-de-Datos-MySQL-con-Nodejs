@@ -2,10 +2,11 @@
   "name": "my-app",
   "version": "1.0.0",
   "description": "- Estructura del Proyecto",
-  "main": "server.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node  --watch server.js"
+    "start": "node  --watch app.js"
   },
   "keywords": [],
   "author": "",
