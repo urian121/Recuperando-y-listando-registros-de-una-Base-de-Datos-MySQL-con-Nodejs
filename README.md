@@ -13,8 +13,9 @@
 
 ## Para correr proyecto existente;
 
-`npm i`
-`node --watch server.js`
+    npm i
+    npm run dev
+    node --watch server.js
 
 ###### Nota: El proyecto ya cuenta con una Tabla la cual solo debe importar en cualquier BD y solo cambiar la configuracion de conexión a la misma.
 

@@ -147,3 +147,6 @@ a {
 .active {
   border-bottom: 3px solid #3f8a3b !important;
 }
+.menu-item.active {
+  border-bottom: 3px solid #3f8a3b !important;
+}
