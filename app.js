@@ -18,9 +18,7 @@ app.set("view engine", "ejs");
 app.set("views", "./views");
 
 app.get("/", (req, res) => {
-  res.render("inicio", {
-    rutaActual: "/",
-  });
+  res.render("inicio");
 });
 
 app.get("/lista-estudiante", (req, res) => {
@@ -41,7 +39,6 @@ app.get("/lista-estudiante", (req, res) => {
     */
 
     res.render("pages/estudiantes", {
-      rutaActual: "/lista-estudiante",
       results: results,
     });
   });
