@@ -1,4 +1,4 @@
-## Listando registros de una Base de Datos MySQL con Node.js 😲
+## Listar registros de una Base de Datos MySQL con Nodejs y Express 😲
 
 ###### Este proyecto trata de como poder conectarme a Mysql y recuperar los registros de una tabla en dicho gestor de base de datos, para esto requerimos usar express como servidor y ejs como motor de plantilla para express, obvion MySQL como gestor de BD.
 
