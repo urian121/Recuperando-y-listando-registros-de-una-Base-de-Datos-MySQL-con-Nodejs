@@ -1,4 +1,4 @@
-# Lista de Estudiantes - Node.js + MySQL
+# Obtener y mostrar datos de MySQL usando Node.js y Express
 
 Aplicación web que demuestra cómo conectar Node.js con MySQL para listar registros de una base de datos usando Express y EJS.
 
