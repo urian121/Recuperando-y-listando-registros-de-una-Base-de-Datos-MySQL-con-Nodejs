@@ -1,30 +1,68 @@
-## Listar registros de una Base de Datos MySQL con Nodejs y Express 😲
+# Lista de Estudiantes - Node.js + MySQL
 
-###### Este proyecto trata de como poder conectarme a Mysql y recuperar los registros de una tabla en dicho gestor de base de datos, para esto requerimos usar express como servidor y ejs como motor de plantilla para express, obvion MySQL como gestor de BD.
+Aplicación web que demuestra cómo conectar Node.js con MySQL para listar registros de una base de datos usando Express y EJS.
 
-#### Paso para inicial el proyecto en NodeJS
+![Vista previa del proyecto](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/portada-listar-registros-de-base-datos-mysql-con-node-urian-viera.png)
 
-`npm init -y`
-`npm install express --save`
-`npm i ejs`
-`npm i cors`
-`npm install --save mysql2`
-`https://www.npmjs.com/package/mysql2`
+## 🚀 Tecnologías
 
-## Para correr proyecto existente;
+- **Backend:** Node.js + Express
+- **Base de datos:** MySQL
+- **Motor de plantillas:** EJS
+- **Frontend:** Bootstrap 5
+- **Módulos:** ES6 (import/export)
 
-    npm i
-    npm run dev
-    node --watch server.js
+## 📋 Requisitos
 
-###### Nota: El proyecto ya cuenta con una Tabla la cual solo debe importar en cualquier BD y solo cambiar la configuracion de conexión a la misma.
+- Node.js 16+
+- MySQL 5.7+
 
-![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/portada-listar-registros-de-base-datos-mysql-con-node-urian-viera.png)
+## ⚡ Instalación
 
+### Proyecto nuevo:
+```bash
+npm init -y
+npm install express ejs cors mysql2
+```
 
-#### Notas
+### Proyecto existente:
+```bash
+npm install
+npm run dev
+```
 
+## 🗄️ Base de datos
 
-    La propiedad "type": "module", en el archivo package.json indica que estamos usando el sistema de modulos ECMAScript(ESM).
-    Con el fin de las palabras claves 'import' y 'export' para importar y exportar modulos respectivamente.
-    Cuando usamos (ESM) algunas caracteriscticas de nodejs como require() y module.exports no estan disponibles, en su lugar estan import y export.
+1. Importa el archivo `bd/nodejs.sql` en tu MySQL
+2. Configura la conexión en `configBD/configBD.js`:
+
+```javascript
+const connection = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "CrudNodejs", // Cambia por tu BD
+  port: 3306,
+});
+```
+
+## 🏃‍♂️ Ejecutar
+
+```bash
+npm run dev
+# o
+node --watch app.js
+```
+
+Visita: `http://localhost:3500`
+
+## 📁 Estructura
+
+```
+├── app.js              # Servidor principal
+├── configBD/           # Configuración MySQL
+├── bd/                 # Script SQL
+├── views/              # Plantillas EJS
+├── public/             # Archivos estáticos
+└── package.json        # Dependencias
+```
